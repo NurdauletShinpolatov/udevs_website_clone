@@ -1,0 +1,49 @@
+.header{
+  width: 100%;
+  box-shadow: 0 1px 0 #e5e9f2;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+
+  .listItem{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    padding: 10px 0;
+    color: var(--dark-color);
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    border-bottom: 2px solid transparent;
+    transition: all .1s ease-in-out;
+    border-radius: 2px;
+
+    &:hover{
+      border-bottom: 2px solid var(--primary-color);
+      cursor: pointer;
+    }
+
+    .dropDown{
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      min-width: 300px;
+      padding: 18px 0;
+      border-radius: 8px;
+      box-shadow: 0 0 2px rgba(0,0,0,.04),0 4px 4px rgba(0,0,0,.08);
+      background-color: #fff;
+      list-style-type: none;
+      transform: translateX(-50%);
+
+      .text{
+        padding: 0 24px;
+        margin-bottom: 20px;
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: rgba(0,0,0,.4);
+      }
+    }
+  }
+}
