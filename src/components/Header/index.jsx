@@ -5,7 +5,6 @@ import Link from "next/link";
 import Image from "next/image";
 import CustomButton from "../CustomButton";
 import { headerLinks } from "@/utils/constants/headerLinks";
-import { colors } from "@/utils/constants/colors";
 import { ArrowDownIcon } from "@/assets/icons/headerIcons";
 
 export default function Header() {
@@ -19,7 +18,7 @@ export default function Header() {
           h="72px"
         >
           <Link href="#">
-            <Image src={Logo} width={96} />
+            <Image src={Logo} width={96} alt="logo"/>
           </Link>
           <UnorderedList
             display="flex"
@@ -30,17 +29,25 @@ export default function Header() {
             {headerLinks.map((item) => (
               <ListItem
                 key={item.id}
-                className={cls.listItem}
+                className={`${cls.listItem} ${item.isDropDown ? cls.dropDown : ''}`}
                 position={item.isDropDown ? "relative" : ""}
               >
                 {item.text}
-                {item.isDropDown && <ArrowDownIcon />}
-                {item.id == 3 && (
-                  <UnorderedList className={cls.dropDown}>
-                    <p className={cls.text}>
-                      {item.text}
-                    </p>
-                  </UnorderedList>
+                {item.isDropDown && (
+                  <>
+                    <ArrowDownIcon />
+                    <UnorderedList className={`${cls.dropDownOptions} ${item.id == 7 ? cls.languages : ''}`}>
+                      <p className={cls.text}>
+                        {item.text}
+                      </p>
+                      {item.subitems.map(subitem => (
+                        <ListItem key={subitem.id} className={cls.subitem}>
+                          <Image src={subitem.icon} className={cls.icon} alt="icons"/>
+                          <p className={cls.subitemText}>{ subitem.text }</p>
+                        </ListItem>
+                      ))}
+                    </UnorderedList>
+                  </>
                 )}
               </ListItem>
             ))}

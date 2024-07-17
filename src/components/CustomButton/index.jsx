@@ -29,6 +29,7 @@ export default function CustomButton({
         bg={colors.primary}
         color="#fff"
         textAlign='center'
+        className={cls.customButton}
         px={px}
         py={py}
         fontSize={fs}

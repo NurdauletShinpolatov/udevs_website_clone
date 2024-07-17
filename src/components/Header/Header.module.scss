@@ -22,11 +22,14 @@
       border-bottom: 2px solid var(--primary-color);
       cursor: pointer;
     }
+  }
 
-    .dropDown{
+  .dropDown{
+    .dropDownOptions{
+      display: none;
       position: absolute;
-      top: 70%;
-      left: 50%;
+      top: 105%;
+      left: 65%;
       min-width: 300px;
       padding: 18px 0;
       border-radius: 8px;
@@ -44,6 +47,71 @@
         letter-spacing: 1px;
         color: rgba(0,0,0,.4);
       }
+
+      .subitem{
+        display: flex;
+        align-items: center;
+        padding: 8px 11px 8px 34px;
+        transition: all .1s ease-in-out;
+        margin-bottom: 8px;
+        
+        .subitemText{
+          margin-left: 24px;
+          font-size: 13px;
+          line-height: 19px;
+          font-weight: 400;
+          color: #000;
+        }
+
+        .icon{
+          width: 48px;
+          height: 48px;
+        }
+
+        &:hover{
+          background-color: var(--primary-color);
+
+          .subitemText{
+            color: #fff;
+          }
+        }
+
+      }
+    }
+
+    .languages{
+      // display: block;
+      min-width: 120px;
+      padding: 16px 0;
+
+      .text{
+        display: none;
+      }
+
+      .subitem{
+        padding: 8px 11px;
+        margin-bottom: 13px;
+
+        .icon{
+          width: 28px;
+          height: 28px;
+        }
+
+        .subitemText{
+          margin-left: 16px;
+          font-size: 16px;
+          font-weight: 600;
+        }
+      }
+    }
+
+    &:hover{
+      border-bottom: 2px solid transparent;
+
+      .dropDownOptions{
+        display: block;
+      }
     }
   }
+
 }
