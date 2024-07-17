@@ -1,4 +1,4 @@
-import Logo from "@/assets/images/logo.svg";
+import Logo from "@/assets/images/header/logo.svg";
 import cls from "./Header.module.scss";
 import { Box, Flex, ListItem, Text, UnorderedList } from "@chakra-ui/react";
 import Link from "next/link";

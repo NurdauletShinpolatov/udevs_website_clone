@@ -1,19 +1,19 @@
 // icons of Services
-import phoneIcon from '@/assets/images/mobileApp.svg'
-import erpIcon from '@/assets/images/erp.svg'
-import designIcon from '@/assets/images/ui_ux.svg'
-import consultingIcon from '@/assets/images/consulting.svg'
-import optimizingIcon from '@/assets/images/optimizing.svg'
+import phoneIcon from '@/assets/images/header/mobileApp.svg'
+import erpIcon from '@/assets/images/header/erp.svg'
+import designIcon from '@/assets/images/header/ui_ux.svg'
+import consultingIcon from '@/assets/images/header/consulting.svg'
+import optimizingIcon from '@/assets/images/header/optimizing.svg'
 
 // icons of Portfolio
-import d from '@/assets/images/D.svg'
-import s from '@/assets/images/S.svg'
-import g from '@/assets/images/G.svg'
-import i from '@/assets/images/I.svg'
+import d from '@/assets/images/header/D.svg'
+import s from '@/assets/images/header/S.svg'
+import g from '@/assets/images/header/G.svg'
+import i from '@/assets/images/header/I.svg'
 
 // icon of Languages
-import ru from '@/assets/images/ru.svg'
-import en from '@/assets/images/en.svg'
+import ru from '@/assets/images/header/ru.svg'
+import en from '@/assets/images/header/en.svg'
 
 export const headerLinks = [
   {
