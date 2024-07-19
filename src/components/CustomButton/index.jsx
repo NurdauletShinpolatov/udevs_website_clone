@@ -1,7 +1,7 @@
 import Link from "next/link";
 import cls from "./CustomButton.module.scss";
 import { Box } from "@chakra-ui/react";
-import { colors } from "@/utils/constants/colors";
+import { colors } from "@/utils/constants/colorsConst";
 
 // display: block;
 //   width: 100%;
@@ -22,6 +22,7 @@ export default function CustomButton({
   borRad,
   minW,
   maxW,
+  mx
 }) {
   return (
     <Link href="#">
@@ -38,6 +39,7 @@ export default function CustomButton({
         borderRadius={borRad}
         minW={minW}
         maxW={maxW}
+        mx={mx}
       >
         {text}
       </Box>

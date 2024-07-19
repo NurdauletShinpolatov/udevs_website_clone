@@ -14,6 +14,7 @@ import i from '@/assets/images/header/I.svg'
 // icon of Languages
 import ru from '@/assets/images/header/ru.svg'
 import en from '@/assets/images/header/en.svg'
+import { InstagramIcon, TwitterIcon, YouTubeIcon } from '@/assets/icons/headerIcons'
 
 export const headerLinks = [
   {
@@ -111,5 +112,35 @@ export const headerLinks = [
         icon: en
       }
     ]
+  }
+]
+
+export const mobileHeaderLinks = [
+  {
+    id: 1,
+    text: "Services",
+  },
+  {
+    id: 2,
+    text: "Clients",
+  },
+  {
+    id: 3,
+    text: "Command",
+  }
+]
+
+export const socialMediaLinks = [
+  {
+    id: 1,
+    icon: <InstagramIcon />
+  },
+  {
+    id: 2,
+    icon: <TwitterIcon />
+  },
+  {
+    id: 3,
+    icon: <YouTubeIcon />
   }
 ]

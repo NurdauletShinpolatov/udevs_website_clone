@@ -1,49 +1,54 @@
+"use client"
+
 import Logo from "@/assets/images/header/logo.svg";
 import cls from "./Header.module.scss";
 import { Box, Flex, ListItem, Text, UnorderedList } from "@chakra-ui/react";
 import Link from "next/link";
 import Image from "next/image";
 import CustomButton from "../CustomButton";
-import { headerLinks } from "@/utils/constants/headerLinks";
-import { ArrowDownIcon } from "@/assets/icons/headerIcons";
+import { headerLinks } from "@/utils/constants/headerConst";
+import { ArrowDownIcon, BurgerIcon } from "@/assets/icons/headerIcons";
+import Slider from "./components/Slider";
+import { useState } from "react";
 
 export default function Header() {
+  const [openSidebar, setOpenSidebar] = useState(false);
+
   return (
     <header className={cls.header}>
-      <Box px="15px" mx="auto" w="1170px">
-        <Flex
-          as="nav"
-          justifyContent="space-between"
-          alignItems="center"
-          h="72px"
-        >
+      <Box px="15px" mx="auto" maxW="1170px">
+        <nav className={cls.nav}>
           <Link href="#">
-            <Image src={Logo} width={96} alt="logo"/>
+            <Image src={Logo} width={96} alt="logo" />
           </Link>
-          <UnorderedList
-            display="flex"
-            alignItems="center"
-            listStyleType="none"
-            gap="32px"
-          >
+
+          <UnorderedList className={cls.headerLinks}>
             {headerLinks.map((item) => (
               <ListItem
                 key={item.id}
-                className={`${cls.listItem} ${item.isDropDown ? cls.dropDown : ''}`}
+                className={`${cls.listItem} ${
+                  item.isDropDown ? cls.dropDown : ""
+                }`}
                 position={item.isDropDown ? "relative" : ""}
               >
                 {item.text}
                 {item.isDropDown && (
                   <>
                     <ArrowDownIcon />
-                    <UnorderedList className={`${cls.dropDownOptions} ${item.id == 7 ? cls.languages : ''}`}>
-                      <p className={cls.text}>
-                        {item.text}
-                      </p>
-                      {item.subitems.map(subitem => (
+                    <UnorderedList
+                      className={`${cls.dropDownOptions} ${
+                        item.id == 7 ? cls.languages : ""
+                      }`}
+                    >
+                      <p className={cls.text}>{item.text}</p>
+                      {item.subitems.map((subitem) => (
                         <ListItem key={subitem.id} className={cls.subitem}>
-                          <Image src={subitem.icon} className={cls.icon} alt="icons"/>
-                          <p className={cls.subitemText}>{ subitem.text }</p>
+                          <Image
+                            src={subitem.icon}
+                            className={cls.icon}
+                            alt="icons"
+                          />
+                          <p className={cls.subitemText}>{subitem.text}</p>
                         </ListItem>
                       ))}
                     </UnorderedList>
@@ -63,7 +68,13 @@ export default function Header() {
               maxW="248px"
             />
           </UnorderedList>
-        </Flex>
+
+          <span className={cls.burgerButton} onClick={() => setOpenSidebar(true)}>
+            <BurgerIcon />
+          </span>
+
+          <Slider openSidebar={openSidebar} setOpenSidebar={setOpenSidebar}/>
+        </nav>
       </Box>
     </header>
   );
