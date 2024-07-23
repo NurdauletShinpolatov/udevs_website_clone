@@ -193,7 +193,7 @@ export function OptimizingIcon() {
 export function BurgerIcon() {
   return (
     <svg
-      class="MuiSvgIcon-root"
+      className="MuiSvgIcon-root"
       focusable="false"
       viewBox="0 0 24 24"
       aria-hidden="true"
@@ -207,7 +207,7 @@ export function BurgerIcon() {
 export function XIcon() {
   return (
     <svg
-      class="MuiSvgIcon-root"
+      className="MuiSvgIcon-root"
       focusable="false"
       viewBox="0 0 24 24"
       aria-hidden="true"
@@ -221,7 +221,7 @@ export function XIcon() {
 export function InstagramIcon() {
   return (
     <svg
-      class="MuiSvgIcon-root"
+      className="MuiSvgIcon-root"
       focusable="false"
       viewBox="0 0 24 24"
       aria-hidden="true"
@@ -236,7 +236,7 @@ export function InstagramIcon() {
 export function TwitterIcon() {
   return (
     <svg
-      class="MuiSvgIcon-root"
+      className="MuiSvgIcon-root"
       focusable="false"
       viewBox="0 0 24 24"
       aria-hidden="true"
@@ -251,7 +251,7 @@ export function TwitterIcon() {
 export function YouTubeIcon() {
   return (
     <svg
-      class="MuiSvgIcon-root"
+      className="MuiSvgIcon-root"
       focusable="false"
       viewBox="0 0 24 24"
       aria-hidden="true"

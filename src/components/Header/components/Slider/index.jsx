@@ -1,7 +1,7 @@
 import { Box, Flex } from "@chakra-ui/react";
 import cls from "./Slider.module.scss";
 import Image from "next/image";
-import logoImg from "@/assets/images/header/logo.svg";
+import logoImg from "@/assets/images/logo.svg";
 import { XIcon } from "@/assets/icons/headerIcons";
 import {
   mobileHeaderLinks,
