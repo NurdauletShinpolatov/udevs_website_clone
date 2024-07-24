@@ -4,6 +4,7 @@
   --primary-color: #1b5bf7;
   --dark-color: #18191f;
   --secondary-color: #464359;
+  --background-color: #f4f7ff;
 }
 
 * {
@@ -21,4 +22,10 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.container{
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
 }

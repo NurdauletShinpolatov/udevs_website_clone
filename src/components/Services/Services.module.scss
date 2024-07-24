@@ -1,0 +1,19 @@
+.services{
+  padding: 100px 0;
+
+  .heading{
+    max-width: 800px;
+    font-size: 64px;
+    line-height: 64px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 80px;
+  }
+
+  .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 24px;
+    column-gap: 30px;
+  }
+}
